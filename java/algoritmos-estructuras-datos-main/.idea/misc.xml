@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/06-Trees/pom.xml" />
+        <option value="$PROJECT_DIR$/08-Heaps/pom.xml" />
+        <option value="$PROJECT_DIR$/09-Tries/pom.xml" />
+        <option value="$PROJECT_DIR$/07-Graphs/pom.xml" />
+        <option value="$PROJECT_DIR$/10-Sorting/pom.xml" />
+        <option value="$PROJECT_DIR$/11-Searching/pom.xml" />
+        <option value="$PROJECT_DIR$/00-CodeSamples/00-CodeSamples/pom.xml" />
+        <option value="$PROJECT_DIR$/04-LinkedLists/pom.xml" />
+        <option value="$PROJECT_DIR$/05-StacksQueues/pom.xml" />
+        <option value="$PROJECT_DIR$/14-ExtraProblems/pom.xml" />
+        <option value="$PROJECT_DIR$/13-BitManipulation/pom.xml" />
+        <option value="$PROJECT_DIR$/12-DynamicProgramming/pom.xml" />
+        <option value="$PROJECT_DIR$/03-ArraysStringsHashTables/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
