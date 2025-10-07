@@ -1,8 +1,7 @@
-# Algoritmos, Estructuras de Datos y Entrevistas
+# Algoritmos, Estructuras de Datos 
 
-Bienvenido al repositorio del curso de Udemy **'Algoritmos, Estructuras de Datos y Entrevistas'** Aquí encontrarás todos los ejemplos prácticos vistos en el curso.
+Bienvenido al repositorio del **'Algoritmos, Estructuras de Datos y Entrevistas'** Aquí encontrarás todos los ejemplos prácticos.
 
-Puedes adquirir el curso en [Udemy](https://www.udemy.com/course/algoritmos-estructuras-de-datos-y-entrevistas-programacion/?referralCode=692670101BBE5EDEED83). Contacta conmigo por [LinkedIn](https://www.linkedin.com/in/daniel-blanco-calvi%C3%B1o-7454ab13b/) para obtener un código de descuento!
 
 
 - [Arrays, Strings y Hash Tables.](https://github.com/danielblanco96/algoritmos-estructuras-datos-entrevistas-udemy/tree/main/03-ArraysStringsHashTables)
