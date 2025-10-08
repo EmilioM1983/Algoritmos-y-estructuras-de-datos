@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remove Duplicates Visual</title>
+<link rel="stylesheet" href="css/remove-dups-visual.css">
+</head>
+<body>
+
+<h1>🔗 Visualizador Remove Duplicates</h1>
+
+<a style="color: aquamarine;" href="../../index.html" class="btn">Inicio</a>
+
+<div class="list" id="list"></div>
+<button id="nextStep">Siguiente paso ▶️</button>
+<p id="desc"></p>
+
+<section style="
+  max-width: 600px;
+  margin: 20px auto;
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(56,189,248,0.3);
+  font-family: 'Segoe UI', sans-serif;
+">
+  <h2 style="color: #38bdf8; text-align:center;"> Propósito del algoritmo</h2>
+  <p style="line-height: 1.6; text-align: justify;">
+    El algoritmo <strong>Remove Duplicates</strong> elimina los valores repetidos de una lista enlazada.
+    Utiliza una estructura auxiliar <code>HashSet</code> para registrar los elementos ya vistos.
+    Cada vez que encuentra un valor duplicado, desvincula el nodo correspondiente, manteniendo
+    solo una ocurrencia de cada número en la lista.
+  </p>
+
+  <h3 style="color: #22c55e;"> Complejidad temporal</h3>
+  <p>
+    <strong>O(N)</strong> — Recorre la lista una sola vez, y cada operación de búsqueda o inserción
+    en el <code>HashSet</code> tiene tiempo constante promedio.
+  </p>
+
+  <h3 style="color: #facc15;"> Complejidad espacial</h3>
+  <p>
+    <strong>O(N)</strong> — En el peor caso, todos los elementos son únicos y se almacenan en el conjunto.
+  </p>
+</section>
+
+
+<script src="js/remove-dups-visual.js"></script>
+</body>
+</html>
