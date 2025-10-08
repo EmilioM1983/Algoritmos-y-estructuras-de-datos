@@ -1,0 +1,109 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  h1 { color: #38bdf8; margin-bottom: 10px; }
+  #array {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .num {
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: 0.4s;
+  }
+  .highlight { background: #38bdf8; color: #0f172a; }
+  .found { background: #10b981; color: #0f172a; }
+  #map {
+    background: rgba(56,189,248,0.1);
+    border: 1px dashed #38bdf8;
+    border-radius: 12px;
+    padding: 15px;
+    width: 260px;
+    text-align: left;
+  }
+  button {
+    background: #38bdf8;
+    border: none;
+    color: #0f172a;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  button:hover { background: #0ea5e9; }
+  #desc { margin-top: 20px; font-style: italic; color: #94a3b8; }
+
+  /* === Estilos para el bloque de explicación de algoritmos === */
+.algoritmo-explicacion {
+  background: #1e1e2e;
+  color: #eaeaea;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  line-height: 1.6;
+  font-family: "JetBrains Mono", monospace;
+  border-left: 6px solid #7b61ff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.algoritmo-explicacion:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 24px rgba(123, 97, 255, 0.3);
+}
+
+.algoritmo-explicacion h2 {
+  color: #b48eff;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.algoritmo-explicacion h3 {
+  color: #8be9fd;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.algoritmo-explicacion p {
+  margin: 0.5rem 0 1rem 0;
+  font-size: 1rem;
+}
+
+.algoritmo-explicacion pre {
+  background: #2a2a3b;
+  color: #f8f8f2;
+  padding: 0.8rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  border: 1px solid #3d3d55;
+}
+
+.algoritmo-explicacion code {
+  background: #2e2e3f;
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: #ffb86c;
+  font-size: 0.95rem;
+}
+
+.algoritmo-explicacion ol,
+.algoritmo-explicacion ul {
+  margin-left: 1.2rem;
+}
+
+.algoritmo-explicacion li {
+  margin-bottom: 0.5rem;
+}

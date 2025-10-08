@@ -4,138 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zero Matrix Visual</title>
-<style>
-  body {
-    font-family: "Segoe UI", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background: #0f172a;
-    color: #f8fafc;
-  }
-  h1 { color: #38bdf8; }
-  #matrix {
-    display: grid;
-    gap: 4px;
-  }
-  .cell {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: all 0.5s ease;
-    background-color: #1e293b;
-  }
-  .zero {
-    background-color: #ef4444;
-    color: white;
-  }
-  .marker {
-    background-color: #facc15;
-  }
-  button {
-    background: #38bdf8;
-    color: #0f172a;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  button:hover { background: #0ea5e9; }
-</style>
+<link rel="stylesheet" href="./css/zero-matrix-visual.css">
 </head>
 <body>
 
 <h1>🧩 Visualizador Zero Matrix</h1>
-<div id="matrix"></div>
+<h3><a style="color: aquamarine;" href="../../index.html">Inicio</a></h3>
+
+<div id="matrix" style="margin-top: 20px;"></div>
 <button id="nextStep">Siguiente paso ▶️</button>
+
 <p id="stepDesc"></p>
 
-<script>
-const steps = [];
-let currentStep = 0;
+<div id="purpose">
+  <strong style="color:#38bdf8;">Propósito del algoritmo Zero Matrix:</strong><br><br>
+  Este algoritmo recibe una matriz de enteros y busca todas las posiciones donde hay un <strong>0</strong>.  
+  Cada vez que se encuentra un cero, establece en <strong>0</strong> toda la <em>fila</em> y la <em>columna</em> correspondiente.  
+  <br><br>
+  Para optimizar el uso de memoria, utiliza la <strong>primera fila</strong> y la <strong>primera columna</strong> 
+  como marcadores, evitando estructuras auxiliares adicionales.
+  <br><br>
+  <strong>Complejidad temporal:</strong> <code>O(M × N)</code>  
+  (donde <em>M</em> es el número de filas y <em>N</em> el número de columnas, 
+  ya que cada elemento de la matriz se recorre al menos una vez).  
+  <br>
+  <strong>Complejidad espacial:</strong> <code>O(1)</code>  
+  (usa solo variables adicionales constantes, sin estructuras de datos extra).
+</div>
 
-let matrix = [
-  [2, 1, 3, 0, 2],
-  [7, 4, 1, 3, 8],
-  [4, 0, 1, 2, 1],
-  [9, 3, 4, 1, 9]
-];
-
-const rows = matrix.length;
-const cols = matrix[0].length;
-const container = document.getElementById("matrix");
-container.style.gridTemplateColumns = `repeat(${cols}, 60px)`;
-
-function render(matrix, desc = "") {
-  container.innerHTML = "";
-  matrix.forEach((row, i) => {
-    row.forEach((val, j) => {
-      const div = document.createElement("div");
-      div.className = "cell" + (val === 0 ? " zero" : "");
-      div.textContent = val;
-      container.appendChild(div);
-    });
-  });
-  document.getElementById("stepDesc").textContent = desc;
-}
-
-function clone(m) {
-  return m.map(r => [...r]);
-}
-
-// Paso 1: detectar ceros en primera fila y columna
-const firstRowHasZero = matrix[0].includes(0);
-const firstColHasZero = matrix.some(row => row[0] === 0);
-steps.push([clone(matrix), "Matriz original"]);
-
-// Paso 2: marcar ceros
-for (let i = 1; i < rows; i++) {
-  for (let j = 1; j < cols; j++) {
-    if (matrix[i][j] === 0) {
-      matrix[i][0] = 0;
-      matrix[0][j] = 0;
-    }
-  }
-}
-steps.push([clone(matrix), "Marcamos en primera fila y columna"]);
-
-// Paso 3: procesar filas
-for (let i = 1; i < rows; i++) {
-  if (matrix[i][0] === 0) {
-    matrix[i] = Array(cols).fill(0);
-  }
-}
-steps.push([clone(matrix), "Procesamos filas con marca 0"]);
-
-// Paso 4: procesar columnas
-for (let j = 1; j < cols; j++) {
-  if (matrix[0][j] === 0) {
-    for (let i = 0; i < rows; i++) {
-      matrix[i][j] = 0;
-    }
-  }
-}
-steps.push([clone(matrix), "Procesamos columnas con marca 0"]);
-
-// Paso 5: aplicar primera fila y columna si tenían ceros
-if (firstRowHasZero) matrix[0] = Array(cols).fill(0);
-if (firstColHasZero) for (let i = 0; i < rows; i++) matrix[i][0] = 0;
-steps.push([clone(matrix), "Resultado final"]);
-
-render(...steps[0]);
-
-document.getElementById("nextStep").addEventListener("click", () => {
-  currentStep = (currentStep + 1) % steps.length;
-  render(...steps[currentStep]);
-});
+<script src="./js/zero-matrix-visual.js">
 </script>
 </body>
 </html>

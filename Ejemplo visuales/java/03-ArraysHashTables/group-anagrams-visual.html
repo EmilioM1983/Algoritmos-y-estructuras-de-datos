@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group Anagrams Visual</title>
+<link rel="stylesheet" href="./css/group-anagrams-visual.css">
+</head>
+<body>
+<h1>🔤 Visualizador Group Anagrams</h1>
+<h3><a style="color: aquamarine;" href="../../index.html">Inicio</a></h3>
+<div id="container" style="margin-top: 50px;"></div>
+<button id="nextStep">Siguiente paso ▶️</button>
+<p id="desc"></p>
+
+<div id="purpose">
+  <h2>🎯 Propósito del algoritmo</h2>
+  <p>
+    Este algoritmo agrupa palabras que son <strong>anagramas</strong>, es decir,
+    aquellas que contienen las <strong>mismas letras en diferente orden</strong>.
+    Para lograrlo, calcula un "hash" que representa la frecuencia de cada letra
+    en una palabra, y usa ese hash como clave para reunir todas las palabras
+    equivalentes. 
+  </p>
+  <p>
+    Ejemplo: <code>"saco"</code> y <code>"caso"</code> generan el mismo hash de letras,
+    por lo que se agrupan juntas.
+  </p>
+</div>
+
+
+<script src="./js/group-anagrams-visual.js"></script>
+</body>
+</html>

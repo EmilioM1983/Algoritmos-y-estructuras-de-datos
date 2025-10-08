@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Sum Visual</title>
+<link rel="stylesheet" href="./css/two-sum.css">
+</head>
+<body>
+<h1>➕ Visualizador Two Sum (Target: 9)</h1>
+<h3><a style="color: aquamarine;" href="../../index.html">Inicio</a></h3>
+
+<div id="array"></div>
+<div id="map"></div>
+<button id="nextStep">Siguiente paso ▶️</button>
+<p id="desc"></p>
+
+<div class="algoritmo-explicacion">
+  <h2>🧩 Algoritmo: Two Sum</h2>
+
+  <section>
+    <h3>🎯 Propósito general</h3>
+    <p>
+      El algoritmo <strong>Two Sum</strong> busca encontrar dos números dentro de un arreglo
+      que sumen un valor objetivo (<code>target</code>). Devuelve los índices de esos dos
+      elementos en el arreglo.
+    </p>
+  </section>
+
+  <section>
+    <h3>📘 Ejemplo</h3>
+    <pre><code>Entrada:
+nums = [2, 7, 11, 15]
+target = 9
+
+Salida:
+[0, 1]  // porque 2 + 7 = 9</code></pre>
+  </section>
+
+  <section>
+    <h3>⚙️ Funcionamiento</h3>
+    <ol>
+      <li>Recorre el arreglo una sola vez.</li>
+      <li>Usa un <code>HashMap</code> para guardar los complementos necesarios.</li>
+      <li>Si el número actual ya está en el mapa, significa que se encontró la pareja correcta.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h3>📊 Complejidad</h3>
+    <ul>
+      <li><strong>Tiempo:</strong> O(n)</li>
+      <li><strong>Espacio:</strong> O(n)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>💡 Aplicaciones prácticas</h3>
+    <ul>
+      <li>Encontrar dos precios que sumen un presupuesto específico.</li>
+      <li>Analizar pares de datos complementarios.</li>
+      <li>Resolver subproblemas de optimización o emparejamiento.</li>
+    </ul>
+  </section>
+</div>
+
+
+<script src="./js/two-sum.js"></script>
+</body>
+</html>

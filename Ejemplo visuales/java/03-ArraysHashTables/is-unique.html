@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualizador - IsUnique()</title>
+  <link rel="stylesheet" href="./css/is-unique.css">
+</head>
+<body>
+  
+  <h1>🔠 Visualizador del algoritmo <code>isUnique()</code></h1>
+  <h3><a style="color: aquamarine;" href="../../index.html">Inicio</a></h3>
+
+  <div style="margin: 50px;">
+    <input type="text" id="inputText" placeholder="Escribe una palabra..." maxlength="128">
+    <button onclick="checkUnique()">Verificar</button>
+  </div>
+
+  <div id="visualization"></div>
+  <div id="result"></div>
+
+  <div id="purpose">
+    <h2>🧠 Análisis del algoritmo IsUnique</h2>
+    <h3>📝 Propósito</h3>
+    <p>
+    Determina si una cadena (String) tiene todos los caracteres únicos, es decir, si ningún carácter se repite.</p>
+    <br>
+
+    <h3>⚙️ Lógica paso a paso</h3>
+    <ol>
+      <li>Suposición inicial 
+        <p>Se asume un conjunto de caracteres ASCII estándar de 128 símbolos posibles.
+        Si el string tiene más de 128 caracteres, automáticamente no puede ser único, 
+        ya que necesariamente habrá repeticiones (principio del palomar).
+        </p>
+      </li>
+      <li>Uso de un set 
+        <p>Se crea un HashSet tipo caracter que almacenará los caracteres ya vistos.
+        </p>
+      </li>
+      <li>Recorrido del string
+        <ul>
+          <li>Por cada caracter c: 
+            <ul>
+              <li>Si ya está en el conjunto → retorna false (carácter duplicado).</li>
+              <li>Si no está → se agrega al conjunto.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Si termina el bucle sin repeticiones → true. 
+      </li>
+    </ol>
+    <br>
+
+  <h3>🧩 Complejidad</h2>
+    <p>
+      Tiempo	O(n) — recorre cada carácter una sola vez <br>
+      Espacio	O(1) — constante (máximo 128 elementos en el set)
+    </p>
+  </div>
+
+  <script src="./js/is-unique.js"></script>
+</body>
+</html>

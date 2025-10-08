@@ -1,0 +1,63 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: #0f172a;
+    color: #f8fafc;
+  }
+  h1 { color: #38bdf8; }
+  #matrix {
+    display: grid;
+    gap: 4px;
+  }
+  .cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    background-color: #1e293b;
+  }
+  .zero {
+    background-color: #ef4444;
+    color: white;
+  }
+  .marker {
+    background-color: #facc15;
+  }
+  button {
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover { background: #0ea5e9; }
+
+  #purpose{
+    max-width: 650px;
+  background: #1e293b;
+  padding: 18px 24px;
+  border-left: 6px solid #38bdf8;
+  border-radius: 12px;
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  animation: fadeIn 1.2s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

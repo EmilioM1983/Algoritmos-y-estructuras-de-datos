@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini-curso Big O — Algoritmos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Estilos específicos de la página Big O (puedes moverlos a styles.css) */
+    .course {
+      max-width: 1000px;
+      width: 95%;
+      margin: 30px auto;
+      background: rgba(33,38,45,0.85);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid rgba(56,62,71,0.6);
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .kbd {
+      background: rgba(255,255,255,0.04);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.03);
+      font-family: monospace;
+    }
+    .chart-wrapper {
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+    }
+    #complexity-canvas {
+      width: 640px;
+      height: 360px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+    .legend { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:10px; }
+    .legend-item { font-size:0.95rem; opacity:0.95; }
+    .legend-swatch { display:inline-block; width:12px; height:12px; vertical-align:middle; margin-right:6px; border-radius:3px; }
+    table.big-o {
+      width:100%;
+      border-collapse: collapse;
+      margin-top:12px;
+      background: rgba(255,255,255,0.02);
+      border-radius:8px;
+      overflow:hidden;
+    }
+    table.big-o th, table.big-o td {
+      padding:10px 12px;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      text-align:left;
+    }
+    .examples { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
+    pre.snippet {
+      background: rgba(0,0,0,0.5);
+      padding:12px;
+      border-radius:8px;
+      overflow:auto;
+      font-size:0.9rem;
+    }
+    .controls { display:flex; gap:10px; justify-content:center; margin-top:12px; }
+    input[type="range"] { width:220px; }
+    .back { margin-top:8px; display:block; text-align:center; }
+  </style>
+</head>
+<body>
+  <h1>Mini-curso express: Big O</h1>
+  <h2>Resumen rápido sobre complejidad algorítmica</h2>
+
+  <div class="course">
+    <div class="section">
+      <strong>¿Qué es Big O?</strong>
+      <p>
+        Notación que describe cómo crece el tiempo de ejecución (o el uso de memoria) de un algoritmo
+        en función del tamaño de la entrada <span class="kbd">n</span>. Nos interesa el término que más influye para entradas grandes.
+      </p>
+    </div>
+
+    <div class="section">
+      <strong>Complejidades comunes</strong>
+      <table class="big-o">
+        <thead>
+          <tr><th>Notación</th><th>Nombre</th><th>Idea</th><th>Ejemplo típico</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>O(1)</td><td>Constante</td><td>Tiempo fijo, no depende de n</td><td>Acceso a array por índice</td></tr>
+          <tr><td>O(log n)</td><td>Logarítmica</td><td>Tamaño se reduce a cada paso</td><td>Búsqueda binaria</td></tr>
+          <tr><td>O(n)</td><td>Lineal</td><td>Procesas cada elemento una vez</td><td>Búsqueda secuencial</td></tr>
+          <tr><td>O(n log n)</td><td>Lineal-Log</td><td>Divide y combina eficientemente</td><td>Merge sort, quicksort promedio</td></tr>
+          <tr><td>O(n²)</td><td>Cuadrática</td><td>Bucles anidados típicos</td><td>Bubble sort, nested loops</td></tr>
+          <tr><td>O(2^n)</td><td>Exponencial</td><td>Se duplica el trabajo</td><td>Fuerza bruta en combinatoria (subset)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <strong>Visualización — curvas de crecimiento</strong>
+      <div class="chart-wrapper">
+        <canvas id="complexity-canvas" width="640" height="360"></canvas>
+      </div>
+      <div class="legend" id="legend"></div>
+      <div class="controls">
+        <label>n = <span id="n-value">50</span></label>
+        <input id="n-range" type="range" min="10" max="200" value="50">
+        <button id="toggle-scale">Cambiar escala (linear/log)</button>
+      </div>
+      <p style="text-align:center; margin-top:8px; opacity:0.9;">
+        Arrastra el control <span class="kbd">n</span> para ver cómo cambian las curvas.
+      </p>
+    </div>
+
+    <div class="section">
+      <strong>Reglas prácticas</strong>
+      <ul>
+        <li>Olvidá constantes y términos más pequeños: O(3n + 10) → O(n).</li>
+        <li>Para loops anidados multiplicás: O(n) dentro de O(n) → O(n²).</li>
+        <li>Recursión depende del árbol de llamadas — analizá profundidad y tamaño por nivel.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <strong>Ejemplos de código (Java - simplificados)</strong>
+      <div class="examples">
+        <div>
+          <p><em>O(1)</em></p>
+          <pre class="snippet">
+// obtener arr[5]
+int x = arr[5];
+          </pre>
+        </div>
+        <div>
+          <p><em>O(n)</em></p>
+          <pre class="snippet">
+for (int i=0;i<n;i++){
+  System.out.println(arr[i]);
+}
+          </pre>
+        </div>
+        <div>
+          <p><em>O(n²)</em></p>
+          <pre class="snippet">
+for (int i=0;i<n;i++){
+  for (int j=0;j<n;j++){
+    // operacion constante
+  }
+}
+          </pre>
+        </div>
+        <div>
+          <p><em>O(log n)</em></p>
+          <pre class="snippet">
+int binSearch(int[] a, int target){
+  int lo=0, hi=a.length-1;
+  while (lo<=hi){
+    int mid=(lo+hi)/2;
+    if (a[mid]==target) return mid;
+    if (a[mid]<target) lo=mid+1; else hi=mid-1;
+  }
+  return -1;
+}
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <a class="back" href="/index.html">← Volver al índice</a>
+  </div>
+
+  <script>
+    // Dibuja las curvas de complejidad en un canvas simple, con opción linear/log y control n
+    (function(){
+      const canvas = document.getElementById('complexity-canvas');
+      const ctx = canvas.getContext('2d');
+      const legendEl = document.getElementById('legend');
+      const nRange = document.getElementById('n-range');
+      const nValue = document.getElementById('n-value');
+      const toggleBtn = document.getElementById('toggle-scale');
+      let scaleMode = 'linear'; // o 'log'
+
+      const complexities = [
+        {name:'O(1)', fn: n=>1, color:'#7ee787'},
+        {name:'O(log n)', fn: n=>Math.log2(n), color:'#58a6ff'},
+        {name:'O(n)', fn: n=>n, color:'#f6c177'},
+        {name:'O(n log n)', fn: n=>n*Math.log2(n), color:'#f28ab2'},
+        {name:'O(n²)', fn: n=>n*n, color:'#d48cff'},
+        {name:'O(2^n)', fn: n=>Math.pow(2, Math.min(n, 30)), color:'#ff8a8a'} // clamp para evitar overflow
+      ];
+
+      // construir leyenda
+      complexities.forEach(c=>{
+        const item = document.createElement('div');
+        item.className='legend-item';
+        item.innerHTML = '<span class="legend-swatch" style="background:'+c.color+'"></span> ' + c.name;
+        legendEl.appendChild(item);
+      });
+
+      function clear(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        // background grid
+        ctx.fillStyle = 'rgba(0,0,0,0)';
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+      }
+
+      function draw(){
+        clear();
+        const padding = 48;
+        const w = canvas.width - padding*2;
+        const h = canvas.height - padding*2;
+        const nMax = parseInt(nRange.value,10);
+        nValue.textContent = nMax;
+
+        // sample points
+        const samples = 200;
+        const xs = Array.from({length:samples}, (_,i)=> {
+          // x from 1..nMax
+          return 1 + (i/(samples-1))*(nMax-1);
+        });
+
+        // compute value arrays
+        const values = complexities.map(c => xs.map(x => c.fn(x)));
+
+        // choose max for scaling (consider mode)
+        let maxVal;
+        if(scaleMode==='linear'){
+            maxVal = Math.max(...values.flat());
+        }else{
+            // escala log: tomar máximo +1 y aplicar log10
+            maxVal = Math.log10(Math.max(...values.flat()) + 1);
+        }
+
+        // draw axes
+        ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+        ctx.lineWidth = 1;
+        // horizontal grid
+        for(let i=0;i<=5;i++){
+          const y = padding + (i/5)*h;
+          ctx.beginPath();
+          ctx.moveTo(padding, y);
+          ctx.lineTo(padding + w, y);
+          ctx.stroke();
+        }
+        // axis labels (x)
+        ctx.fillStyle = 'rgba(230,237,243,0.6)';
+        ctx.font = '12px system-ui, monospace';
+        ctx.fillText('n →', padding + w - 20, padding + h + 22);
+
+        // draw curves
+        complexities.forEach((c,ci) => {
+          ctx.beginPath();
+          ctx.lineWidth = 2.2;
+          ctx.strokeStyle = c.color;
+          ctx.shadowColor = c.color;
+          ctx.shadowBlur = 6;
+          values[ci].forEach((v, idx) => {
+            let scaled = (scaleMode === 'linear') ? v/maxVal : Math.log10(v+1)/maxVal;
+            scaled = Math.max(0, Math.min(1, scaled));
+            const x = padding + (idx/(samples-1))*w;
+            const y = padding + (1 - scaled)*h;
+            if (idx===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+          });
+          ctx.stroke();
+          ctx.shadowBlur = 0;
+        });
+
+        // draw small labels at end of lines
+        complexities.forEach((c,ci) => {
+          const lastVal = values[ci][values[ci].length-1];
+          const scaled = (scaleMode === 'linear') ? lastVal/maxVal : Math.log10(lastVal+1)/maxVal;
+          const x = padding + w * 0.98;
+          const y = padding + (1 - Math.max(0,Math.min(1,scaled))) * h;
+          ctx.fillStyle = c.color;
+          ctx.font = '12px system-ui, monospace';
+          ctx.fillText(c.name, x+6, y+4);
+        });
+      }
+
+      // eventos
+      nRange.addEventListener('input', draw);
+      toggleBtn.addEventListener('click', ()=>{
+        scaleMode = (scaleMode==='linear') ? 'log' : 'linear';
+        toggleBtn.textContent = 'Cambiar escala (' + (scaleMode==='linear' ? 'linear/log' : 'log/linear') + ')';
+        draw();
+      });
+
+      // redimensionar canvas para dpi
+      function fixDPI(){
+        const ratio = window.devicePixelRatio || 1;
+        const w = canvas.width;
+        const h = canvas.height;
+        canvas.width = w * ratio;
+        canvas.height = h * ratio;
+        canvas.style.width = w + 'px';
+        canvas.style.height = h + 'px';
+        ctx.setTransform(ratio,0,0,ratio,0,0);
+      }
+      fixDPI();
+      draw();
+
+      // redibujar cuando cambie tamaño de ventana
+      window.addEventListener('resize', ()=>{
+        fixDPI();
+        draw();
+      });
+    })();
+  </script>
+</body>
+</html>
