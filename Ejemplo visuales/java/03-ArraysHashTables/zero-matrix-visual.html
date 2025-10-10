@@ -5,12 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zero Matrix Visual</title>
 <link rel="stylesheet" href="./css/zero-matrix-visual.css">
+<script src="../components/navegacion.js"></script>
 </head>
 <body>
 
 <h1>🧩 Visualizador Zero Matrix</h1>
 
-<a style="color: aquamarine;" href="../../index.html" class="btn">Inicio</a>
+<div>
+      <div id="navegacion"></div>
+
+      <script>
+        cargarNavegacion('navegacion',"https://gist.github.com/EmilioM1983/c53bb5ae20b0cad6d194a020d09943f1");
+    </script>
+    </div>
 
 <div id="matrix" style="margin-top: 20px;"></div>
 <button id="nextStep">Siguiente paso ▶️</button>

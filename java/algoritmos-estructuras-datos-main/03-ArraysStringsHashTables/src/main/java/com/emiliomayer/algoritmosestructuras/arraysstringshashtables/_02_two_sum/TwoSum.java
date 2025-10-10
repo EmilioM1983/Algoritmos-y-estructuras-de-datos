@@ -33,4 +33,14 @@ public class TwoSum {
 
     return null;
   }
+
+    public static void main(String[] args) {
+        int[] array = new int[] {9, 2, 5, 6};
+        TwoSum twoSum = new TwoSum();
+        int[] result = twoSum.twoSum(array, 7);
+
+        for (int i = 0; i < result.length; i++){
+            System.out.print(result[i]+ ", ");
+        }
+    }
 }

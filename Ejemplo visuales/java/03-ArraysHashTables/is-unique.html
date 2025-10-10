@@ -1,65 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Visualizador - IsUnique()</title>
-  <link rel="stylesheet" href="./css/is-unique.css">
-</head>
-<body>
-  
-  <h1>🔠 Visualizador del algoritmo <code>isUnique()</code></h1>
-  
-  <a style="color: aquamarine;" href="../../index.html" class="btn">Inicio</a>
+  <head>
+    <meta charset="UTF-8">
+    <title>Visualizador - IsUnique()</title>
+    <link rel="stylesheet" href="./css/is-unique.css">
+    <script src="../components/navegacion.js"></script>
+  </head>
+  <body>
 
-  <div style="margin: 50px;">
-    <input type="text" id="inputText" placeholder="Escribe una palabra..." maxlength="128">
-    <button onclick="checkUnique()">Verificar</button>
-  </div>
+    <h1>🔠 Visualizador del algoritmo <code>isUnique()</code></h1>
 
-  <div id="visualization"></div>
-  <div id="result"></div>
+    <div>
+      <div id="navegacion"></div>
+    
+    <script>
+        cargarNavegacion('navegacion', "https://gist.github.com/EmilioM1983/60a2155397a6debde907ee7c29869e1f");
+    </script>
+    </div>
+    </div>
 
-  <div id="purpose">
-    <h2>Análisis del algoritmo IsUnique</h2>
-    <h3>Propósito</h3>
-    <p>
-    Determina si una cadena (String) tiene todos los caracteres únicos, es decir, si ningún carácter se repite.</p>
-    <br>
+    <div style="margin: 50px;">
+      <input type="text" id="inputText" placeholder="Escribe una palabra..."
+        maxlength="128">
+      <button onclick="checkUnique()">Verificar</button>
+    </div>
 
-    <h3>Lógica paso a paso</h3>
-    <ol>
-      <li>Suposición inicial 
-        <p>Se asume un conjunto de caracteres ASCII estándar de 128 símbolos posibles.
-        Si el string tiene más de 128 caracteres, automáticamente no puede ser único, 
-        ya que necesariamente habrá repeticiones (principio del palomar).
-        </p>
-      </li>
-      <li>Uso de un set 
-        <p>Se crea un HashSet tipo caracter que almacenará los caracteres ya vistos.
-        </p>
-      </li>
-      <li>Recorrido del string
-        <ul>
-          <li>Por cada caracter c: 
-            <ul>
-              <li>Si ya está en el conjunto → retorna false (carácter duplicado).</li>
-              <li>Si no está → se agrega al conjunto.</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Si termina el bucle sin repeticiones → true. 
-      </li>
-    </ol>
-    <br>
+    <div id="visualization"></div>
+    <div id="result"></div>
 
-  <h3>Complejidad</h2>
-    <p>
-      Tiempo	O(n) — recorre cada carácter una sola vez <br>
-      Espacio	O(1) — constante (máximo 128 elementos en el set)
-    </p>
-  </div>
+    <div id="purpose">
+      <h2>Análisis del algoritmo IsUnique</h2>
+      <h3>Propósito</h3>
+      <p>
+        Determina si una cadena (String) tiene todos los caracteres únicos, es
+        decir, si ningún carácter se repite.</p>
+      <br>
 
-  <script src="./js/is-unique.js"></script>
-</body>
+      <h3>Lógica paso a paso</h3>
+      <ol>
+        <li>Suposición inicial
+          <p>Se asume un conjunto de caracteres ASCII estándar de 128 símbolos
+            posibles.
+            Si el string tiene más de 128 caracteres, automáticamente no puede
+            ser único,
+            ya que necesariamente habrá repeticiones (principio del palomar).
+          </p>
+        </li>
+        <li>Uso de un set
+          <p>Se crea un HashSet tipo caracter que almacenará los caracteres ya
+            vistos.
+          </p>
+        </li>
+        <li>Recorrido del string
+          <ul>
+            <li>Por cada caracter c:
+              <ul>
+                <li>Si ya está en el conjunto → retorna false (carácter
+                  duplicado).</li>
+                <li>Si no está → se agrega al conjunto.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Si termina el bucle sin repeticiones → true.
+        </li>
+      </ol>
+      <br>
+
+      <h3>Complejidad</h2>
+      <p>
+        Tiempo O(n) — recorre cada carácter una sola vez <br>
+        Espacio O(1) — constante (máximo 128 elementos en el set)
+      </p>
+
+      <div id="flowchart">
+        <h2>Diagrama de Flujo - Algoritmo IsUnique</h2>
+        <div class="mermaid">
+          graph TD
+          Start[INICIO] --> Input[Recibir string s]
+          Input --> CheckLength{longitud s > 128?}
+          CheckLength -->|Si| ReturnFalse1[Retornar FALSE]
+          CheckLength -->|No| CreateSet[Crear Set vacio]
+          CreateSet --> LoopStart[Para cada char c en s]
+          LoopStart --> CheckDuplicate{Set contiene c?}
+          CheckDuplicate -->|Si| ReturnFalse2[Retornar FALSE]
+          CheckDuplicate -->|No| AddToSet[Añadir c al Set]
+          AddToSet --> CheckRemaining{Quedan caracteres?}
+          CheckRemaining -->|Si| LoopStart
+          CheckRemaining -->|No| ReturnTrue[Retornar TRUE]
+          ReturnFalse1 --> End[FIN]
+          ReturnFalse2 --> End
+          ReturnTrue --> End
+        </div>
+      </div>
+
+    </div>
+
+    <script src="./js/is-unique.js"></script>
+    <!-- Incluir la librería Mermaid -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+  mermaid.initialize({startOnLoad: true});
+</script>
+  </body>
 </html>

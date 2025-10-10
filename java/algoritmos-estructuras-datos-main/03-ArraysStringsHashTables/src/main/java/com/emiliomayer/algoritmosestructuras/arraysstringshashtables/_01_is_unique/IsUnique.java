@@ -25,4 +25,14 @@ public class IsUnique {
 
     return true;
   }
+
+    public static void main(String[] args) {
+        IsUnique isUnique = new IsUnique();
+
+        if (isUnique.isUnique("abcd")){
+            System.out.println("No hay caracteres repetidos");
+        }else {
+            System.out.println("Hay caracteres repetidos");
+        }
+    }
 }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merge Two Sorted Lists Visual</title>
+<link rel="stylesheet" href="css/merge-two-lists-visual.css">
+</head>
+<body>
+
+<h1>🔗 Visualizador Merge Two Sorted Lists</h1>
+
+<div class="list" id="list1"></div>
+<div class="list" id="list2"></div>
+<hr style="width:60%;border:1px solid #334155;">
+<div class="list" id="merged"></div>
+
+<button id="nextStep">Siguiente paso ▶️</button>
+<p id="desc"></p>
+
+<script src="js/merge-two-lists-visual.js"></script>
+
+<section style="max-width:800px; background:#1e293b; color:#f8fafc; padding:20px; border-radius:16px; line-height:1.6; box-shadow:0 0 10px #0f172a;">
+  <h2 style="color:#38bdf8;"> Explicación del algoritmo Merge Two Sorted Lists</h2>
+
+  <p>
+    Este algoritmo combina <strong>dos listas enlazadas simples ordenadas</strong> en una sola lista también ordenada. 
+    No crea nuevos nodos, sino que <strong>reutiliza los nodos existentes</strong> de ambas listas ajustando sus punteros.
+  </p>
+
+  <h3 style="color:#facc15;"> Propósito</h3>
+  <p>
+    Dado que las listas ya están ordenadas, el objetivo es <strong>fusionarlas manteniendo el orden</strong> sin necesidad de copiar los datos ni usar espacio adicional.
+    Es un paso fundamental en algoritmos como <em>Merge Sort</em> o en sistemas que combinan secuencias ordenadas.
+  </p>
+
+  <h3 style="color:#facc15;"> Funcionamiento resumido</h3>
+  <ol>
+    <li>Se crea un nodo auxiliar <code>aux</code> que sirve de punto de partida para la nueva lista.</li>
+    <li>Se comparan los valores actuales de <code>list1</code> y <code>list2</code>.</li>
+    <li>El menor valor se enlaza a <code>current.next</code> y se avanza en esa lista.</li>
+    <li>El puntero <code>current</code> se mueve al nodo recién añadido.</li>
+    <li>El proceso se repite hasta que una de las listas termina.</li>
+    <li>Finalmente, se enlaza el resto de la lista que aún tiene elementos.</li>
+  </ol>
+
+  <h3 style="color:#facc15;">Complejidad temporal</h3>
+  <p>
+    Cada nodo de ambas listas se visita exactamente una vez, ya que en cada comparación uno de los punteros 
+    (<code>list1</code> o <code>list2</code>) avanza.  
+    Por eso, la complejidad temporal es:
+  </p>
+
+  <pre style="background:#0f172a; padding:10px; border-radius:8px; color:#a5f3fc;">O(N)</pre>
+  <p>
+    donde <code>N</code> es la suma del tamaño de ambas listas.
+  </p>
+
+  <h3 style="color:#facc15;"> Complejidad espacial</h3>
+  <p>
+    No se crea memoria adicional proporcional al tamaño de las listas; 
+    solo se utilizan unos pocos punteros auxiliares (<code>aux</code> y <code>current</code>).  
+    Por tanto, su complejidad espacial es:
+  </p>
+
+  <pre style="background:#0f172a; padding:10px; border-radius:8px; color:#a5f3fc;">O(1)</pre>
+
+  <p>
+    Es decir, el algoritmo realiza la fusión <strong>en tiempo lineal y espacio constante</strong>.
+  </p>
+</section>
+
+
+</body>
+</html>
