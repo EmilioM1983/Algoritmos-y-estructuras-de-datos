@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8a1721f-cfa1-4efc-a911-a98def115ff5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Ejemplo visuales/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ejemplo visuales/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/css/remove-dups-visual.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/css/remove-dups-visual.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/merge-two-lists-visual.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/merge-two-lists-visual.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/remove-dups-visual.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/remove-dups-visual.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-ArraysStringsHashTables/src/main/java/com/emiliomayer/algoritmosestructuras/arraysstringshashtables/_01_is_unique/IsUnique.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-ArraysStringsHashTables/src/main/java/com/emiliomayer/algoritmosestructuras/arraysstringshashtables/_01_is_unique/IsUnique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-ArraysStringsHashTables/src/main/java/com/emiliomayer/algoritmosestructuras/arraysstringshashtables/_02_two_sum/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-ArraysStringsHashTables/src/main/java/com/emiliomayer/algoritmosestructuras/arraysstringshashtables/_02_two_sum/TwoSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-ArraysStringsHashTables/src/main/java/com/emiliomayer/algoritmosestructuras/arraysstringshashtables/_04_zero_matrix/ZeroMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-ArraysStringsHashTables/src/main/java/com/emiliomayer/algoritmosestructuras/arraysstringshashtables/_04_zero_matrix/ZeroMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-LinkedLists/src/main/java/com/emiliomayer/algoritmosestructuras/_03_nth_node_to_last/NthNodeToLast.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-LinkedLists/src/main/java/com/emiliomayer/algoritmosestructuras/_03_nth_node_to_last/NthNodeToLast.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -28,30 +37,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.IsUnique.executor": "Run",
-    "Application.MergeTwoSortedLists.executor": "Run",
-    "Application.RemoveDups.executor": "Run",
-    "Application.TwoSum.executor": "Run",
-    "JUnit.AddTwoNumbersTest.executor": "Run",
-    "JUnit.MergeTwoSortedListsTest.executor": "Run",
-    "JUnit.NthNodeToLastTest.executor": "Run",
-    "JUnit.RemoveDupsTest.executor": "Run",
-    "JUnit.SwapNodesInPairsTest.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.IsUnique.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MergeTwoSortedLists.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RemoveDups.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TwoSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AddTwoNumbersTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MergeTwoSortedListsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.NthNodeToLastTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RemoveDupsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SwapNodesInPairsTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.IsUnique">
+}</component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="IsUnique" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.emiliomayer.algoritmosestructuras.arraysstringshashtables._01_is_unique.IsUnique" />
       <module name="arraysstringshashtables" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.emiliomayer.algoritmosestructuras.arraysstringshashtables._01_is_unique.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.emiliomayer.algoritmosestructuras._03_nth_node_to_last.Main" />
+      <module name="linked-list" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emiliomayer.algoritmosestructuras._03_nth_node_to_last.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,19 +95,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RemoveDups" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.emiliomayer.algoritmosestructuras._01_remove_dups.RemoveDups" />
-      <module name="linked-list" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.emiliomayer.algoritmosestructuras._01_remove_dups.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TwoSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.emiliomayer.algoritmosestructuras.arraysstringshashtables._02_two_sum.TwoSum" />
       <module name="arraysstringshashtables" />
@@ -98,16 +108,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeTwoSortedListsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NthNodeToLastTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="linked-list" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.emiliomayer.algoritmosestructuras._02_merge__two_sorted_lists.*" />
+          <option name="PATTERN" value="com.emiliomayer.algoritmosestructuras._03_nth_node_to_last.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.emiliomayer.algoritmosestructuras._02_merge__two_sorted_lists" />
-      <option name="MAIN_CLASS_NAME" value="com.emiliomayer.algoritmosestructuras._02_merge__two_sorted_lists.MergeTwoSortedListsTest" />
+      <option name="PACKAGE_NAME" value="com.emiliomayer.algoritmosestructuras._03_nth_node_to_last" />
+      <option name="MAIN_CLASS_NAME" value="com.emiliomayer.algoritmosestructuras._03_nth_node_to_last.NthNodeToLastTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.NthNodeToLastTest" />
         <item itemvalue="Application.IsUnique" />
         <item itemvalue="Application.TwoSum" />
         <item itemvalue="Application.MergeTwoSortedLists" />
-        <item itemvalue="JUnit.MergeTwoSortedListsTest" />
-        <item itemvalue="Application.RemoveDups" />
       </list>
     </recent_temporary>
   </component>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/nth-node-to-last-visual.css">
+<script src="../components/navegacion.js"></script>
+<title>Nth Node To Last Visual</title>
+
+</head>
+<body>
+
+<h1>🔗 Visualizador Nth Node To Last</h1>
+<div id="navegacion"></div>
+
+      <script>
+        cargarNavegacion('navegacion',"https://gist.github.com/EmilioM1983/2bfd16b3ed761fcdeb12724584cdc37b");
+    </script>
+</div>
+
+<div class="list" id="list"></div>
+<h3>n = 2</h3>
+<button id="nextStep">Siguiente paso ▶️</button>
+<p id="desc"></p>
+
+<div class="info">
+  <strong>Propósito:</strong> Encontrar el <em>n-ésimo nodo desde el final</em> de una lista enlazada simple usando dos punteros.<br><br>
+  <strong>Algoritmo:</strong> Se usan dos punteros <code>p1</code> y <code>p2</code> iniciando en la cabeza de la lista. Se mueve <code>p1</code> <em>n pasos adelante</em>. Luego se mueve <code>p1</code> y <code>p2</code> simultáneamente hasta que <code>p1</code> llegue al final. En ese momento, <code>p2</code> apunta al nodo n-ésimo desde el final.<br><br>
+  <strong>Complejidad:</strong><br>
+  - Temporal: O(L), siendo L la longitud de la lista<br>
+  - Espacial: O(1), ya que no se usan estructuras adicionales
+</div>
+
+<script src="js/nth-node-to-last-visual.js"></script>
+
+</body>
+</html>
