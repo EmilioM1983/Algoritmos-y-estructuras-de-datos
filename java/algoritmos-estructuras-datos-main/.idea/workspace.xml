@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f8a1721f-cfa1-4efc-a911-a98def115ff5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-LinkedLists/src/main/java/com/emiliomayer/algoritmosestructuras/_05_swap_nodes_in_pairs/SwapNodesInPairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-LinkedLists/src/main/java/com/emiliomayer/algoritmosestructuras/_05_swap_nodes_in_pairs/SwapNodesInPairs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
