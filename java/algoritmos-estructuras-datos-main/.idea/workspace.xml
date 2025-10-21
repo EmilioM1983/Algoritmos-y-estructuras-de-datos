@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8a1721f-cfa1-4efc-a911-a98def115ff5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Ejemplo visuales/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ejemplo visuales/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/css/remove-dups-visual.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/css/remove-dups-visual.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/merge-two-lists-visual.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/merge-two-lists-visual.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/remove-dups-visual.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ejemplo visuales/java/04-LinkedList/remove-dups-visual.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04-LinkedLists/src/main/java/com/emiliomayer/algoritmosestructuras/_03_nth_node_to_last/NthNodeToLast.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-LinkedLists/src/main/java/com/emiliomayer/algoritmosestructuras/_03_nth_node_to_last/NthNodeToLast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04-LinkedLists/src/main/java/com/emiliomayer/algoritmosestructuras/_05_swap_nodes_in_pairs/SwapNodesInPairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/04-LinkedLists/src/main/java/com/emiliomayer/algoritmosestructuras/_05_swap_nodes_in_pairs/SwapNodesInPairs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +50,7 @@
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.SwapNodesInPairsTest">
     <configuration name="IsUnique" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.emiliomayer.algoritmosestructuras.arraysstringshashtables._01_is_unique.IsUnique" />
       <module name="arraysstringshashtables" />
@@ -75,19 +70,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.emiliomayer.algoritmosestructuras._03_nth_node_to_last.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MergeTwoSortedLists" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.emiliomayer.algoritmosestructuras._02_merge__two_sorted_lists.MergeTwoSortedLists" />
-      <module name="linked-list" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.emiliomayer.algoritmosestructuras._02_merge__two_sorted_lists.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,13 +105,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SwapNodesInPairsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="linked-list" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emiliomayer.algoritmosestructuras._05_swap_nodes_in_pairs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.emiliomayer.algoritmosestructuras._05_swap_nodes_in_pairs" />
+      <option name="MAIN_CLASS_NAME" value="com.emiliomayer.algoritmosestructuras._05_swap_nodes_in_pairs.SwapNodesInPairsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SwapNodesInPairsTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.NthNodeToLastTest" />
         <item itemvalue="Application.IsUnique" />
         <item itemvalue="Application.TwoSum" />
-        <item itemvalue="Application.MergeTwoSortedLists" />
       </list>
     </recent_temporary>
   </component>

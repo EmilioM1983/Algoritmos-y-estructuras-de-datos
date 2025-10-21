@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swap Nodes In Pairs - Explicación y Visualización</title>
+<link rel="stylesheet" href="css/swapNodesInPairs.css">
+<script src="../components/navegacion.js"></script>
+</head>
+<body>
+
+<h1>Swap Nodes In Pairs</h1>
+
+<div id="navegacion"></div>
+
+      <script>
+        cargarNavegacion('navegacion',"https://gist.github.com/EmilioM1983/b86c554155f7feb289baa4057cd947e9");
+    </script>
+</div>
+
+<h3>Lista Original</h3>
+<div class="list" id="originalList"></div>
+
+<h3>Resultado (paso a paso)</h3>
+<div class="list" id="swappedList"></div>
+
+<button id="nextStep">Siguiente paso ▶️</button>
+<p id="desc"></p>
+
+<div class="info">
+  <strong>Propósito:</strong> Intercambiar nodos adyacentes en una lista enlazada sin modificar sus valores internos.<br><br>
+  <strong>Algoritmo:</strong> Se realiza de forma recursiva: en cada paso se toma el primer par de nodos, se intercambian sus enlaces y se llama recursivamente con el resto de la lista.<br><br>
+  <strong>Ejemplo:</strong> 1→2→4→6→8 → 2→1→6→4→8<br><br>
+  <strong>Complejidad:</strong><br>
+  - Temporal: O(N)<br>
+  - Espacial: O(N) (por la recursión)
+</div>
+
+<script src="js/swapNodesInPairs.js"></script>
+
+</body>
+</html>

@@ -13,6 +13,12 @@ import com.emiliomayer.algoritmosestructuras._00_linkedlist.Node;
 public class SwapNodesInPairs {
 
   public Node swapNodesInPairs(Node head) {
-    throw new UnsupportedOperationException("Not implemented yet");
+    if (head == null || head.next == null) return head;
+
+    Node temporal = head.next.next; //4->6->8
+    head.next.next = head; //1->2->1...
+    head = head.next; //2->1...
+    head.next.next = swapNodesInPairs(temporal);
+    return head;
   }
 }

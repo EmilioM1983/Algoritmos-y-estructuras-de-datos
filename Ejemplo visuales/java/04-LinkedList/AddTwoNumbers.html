@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Two Numbers - Explicación y Visualización</title>
+<link rel="stylesheet" href="css/addTwoNumbers.css">
+<script src="../components/navegacion.js"></script>
+</head>
+<body>
+
+<h1>Add Two Numbers</h1>
+
+<div id="navegacion"></div>
+
+      <script>
+        cargarNavegacion('navegacion',"https://gist.github.com/EmilioM1983/b86c554155f7feb289baa4057cd947e9");
+    </script>
+</div>
+
+<h3>Lista 1</h3>
+<div class="list" id="list1"></div>
+
+<h3>Lista 2</h3>
+<div class="list" id="list2"></div>
+
+<h3>Resultado</h3>
+<div class="list" id="resultList"></div>
+
+<button id="nextStep">Siguiente paso ▶️</button>
+<p id="desc"></p>
+
+<div class="info">
+  <strong>Propósito:</strong> Sumar dos números representados por listas enlazadas simples, donde cada nodo contiene un dígito en orden inverso (el primer nodo es el dígito menos significativo).<br><br>
+  <strong>Algoritmo:</strong> Recorre ambas listas simultáneamente, sumando dígitos y manejando el “carry” (acarreo) si la suma supera 9. Crea una nueva lista con los dígitos resultantes.<br><br>
+  <strong>Ejemplo:</strong> 1→2→4 + 5→2→8 → 6→4→2→1<br>
+  (6421 + 825 = 7246)<br><br>
+  <strong>Complejidad:</strong><br>
+  - Temporal: O(n)<br>
+  - Espacial: O(n))
+</div>
+
+<script src="js/addTwoNumbers.js"></script>
+
+</body>
+</html>
