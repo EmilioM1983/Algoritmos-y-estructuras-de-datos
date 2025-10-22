@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Listas Enlazadas - Introducción</title>
+<link rel="stylesheet" href="css/teoria.css">
+<script src="../../components/navegacion.js"></script>
+</head>
+<body>
+
+<h1>🔗 Introducción a las Listas Enlazadas</h1>
+
+<div id="navegacion"></div>
+
+      <script>
+        cargarNavegacion('navegacion',"https://gist.github.com/EmilioM1983/b86c554155f7feb289baa4057cd947e9");
+    </script>
+</div>
+
+<div class="section">
+  <p>
+    En este tema estudiaremos una estructura de datos fundamental: las 
+    <strong>listas enlazadas</strong> (<em>linked lists</em>).
+    Son una forma flexible y dinámica de representar secuencias de datos,
+    donde cada elemento (nodo) contiene un valor y un enlace hacia otro nodo.
+  </p>
+</div>
+
+<h2>🧩 Tipos de Listas Enlazadas</h2>
+<div class="section">
+  <p>
+    Existen dos tipos principales:
+  </p>
+  <ul>
+    <li><strong>Lista enlazada simple:</strong> cada nodo almacena un valor y una referencia al siguiente nodo.</li>
+    <li><strong>Lista enlazada doble:</strong> cada nodo almacena un valor, una referencia al nodo siguiente y otra al anterior.</li>
+  </ul>
+  <p>
+    En ambos casos, el primer nodo se denomina <span class="highlight">head</span> o <span class="highlight">inicio</span> de la lista.
+    Desde él se pueden recorrer todos los elementos uno a uno.
+  </p>
+</div>
+
+<h2>⚙️ Operaciones Básicas</h2>
+<div class="section">
+  <h3>1️⃣ Inserción</h3>
+  <p>
+    Para insertar un nuevo nodo al final de una lista enlazada simple:
+  </p>
+  <ul>
+    <li>Se parte del nodo inicial (<code>head</code>).</li>
+    <li>Se avanza nodo a nodo hasta encontrar el último (aquel cuyo <code>next</code> es <code>null</code>).</li>
+    <li>Se crea el nuevo nodo y se asigna como siguiente.</li>
+  </ul>
+  <p><strong>Ejemplo:</strong></p>
+  <pre>
+18 → 25 → 10 → 15 → 2
+Agregar: 5
+Resultado: 18 → 25 → 10 → 15 → 2 → 5
+  </pre>
+
+  <h3>2️⃣ Eliminación</h3>
+  <p>
+    Existen dos casos posibles:
+  </p>
+  <ul>
+    <li><strong>Eliminar el primer nodo:</strong> se actualiza el puntero <code>head</code> al siguiente nodo.</li>
+    <li><strong>Eliminar un nodo intermedio:</strong> se enlaza el nodo anterior con el siguiente, dejando fuera al nodo eliminado.</li>
+  </ul>
+  <pre>
+Eliminar: 10
+Antes: 18 → 25 → 10 → 15 → 2
+Después: 18 → 25 → 15 → 2
+  </pre>
+</div>
+
+<h2>💡 Ventajas y Desventajas</h2>
+<div class="section">
+  <h3>✅ Ventajas</h3>
+  <ul>
+    <li>Permiten <strong>insertar o eliminar elementos</strong> fácilmente en cualquier posición sin necesidad de mover todos los datos.</li>
+    <li>Su tamaño es <strong>dinámico</strong>, no requiere espacio fijo.</li>
+  </ul>
+
+  <h3>⚠️ Desventajas</h3>
+  <ul>
+    <li>El acceso a un elemento específico <strong>no es directo</strong>; hay que recorrer los nodos hasta encontrarlo.</li>
+    <li>Requieren <strong>más memoria</strong> que un array, debido a los punteros adicionales.</li>
+  </ul>
+</div>
+
+<h2>📘 Comparación con Arrays</h2>
+<div class="section">
+  <p>
+    A diferencia de los arrays, las listas enlazadas permiten insertar o eliminar elementos sin necesidad de desplazar datos.
+    Sin embargo, acceder a un elemento específico requiere recorrer la lista desde el inicio.
+  </p>
+
+  <table style="width:100%; border-collapse: collapse; text-align:left;">
+    <tr style="background:#334155;">
+      <th style="padding:8px;">Operación</th>
+      <th style="padding:8px;">Array</th>
+      <th style="padding:8px;">Lista Enlazada</th>
+    </tr>
+    <tr>
+      <td style="padding:8px;">Acceso por índice</td>
+      <td style="padding:8px;">O(1)</td>
+      <td style="padding:8px;">O(N)</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;">Inserción / Eliminación</td>
+      <td style="padding:8px;">O(N)</td>
+      <td style="padding:8px;">O(1)</td>
+    </tr>
+    <tr>
+      <td style="padding:8px;">Tamaño fijo</td>
+      <td style="padding:8px;">Sí</td>
+      <td style="padding:8px;">No</td>
+    </tr>
+  </table>
+</div>
+
+<h2>🎯 Conclusión</h2>
+<div class="section">
+  <p>
+    Las listas enlazadas son una herramienta poderosa y flexible para el manejo dinámico de datos.
+    Aunque no son tan rápidas para acceder a elementos individuales, su eficiencia en inserciones y eliminaciones
+    las convierte en una estructura ideal para muchos algoritmos y problemas prácticos.
+  </p>
+</div>
+
+</body>
+</html>

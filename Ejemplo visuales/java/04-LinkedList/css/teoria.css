@@ -1,0 +1,29 @@
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  h1, h2 { color: #38bdf8; }
+  .section {
+    max-width: 850px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    line-height: 1.6;
+  }
+  .highlight {
+    color: #facc15;
+    font-weight: bold;
+  }
+  ul { margin-left: 20px; }
+  pre {
+    background: #0f172a;
+    padding: 10px;
+    border-radius: 8px;
+    color: #f8fafc;
+  }

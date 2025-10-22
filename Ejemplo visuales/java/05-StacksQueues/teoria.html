@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilas y Colas - Introducción</title>
+<link rel="stylesheet" href="css/teoria.css">
+<script src="../../components/navegacion.js"></script>
+</head>
+<body>
+
+<h1>📚 Introducción a Pilas y Colas</h1>
+
+<div class="section">
+  <p>
+    En este tema estudiaremos dos estructuras de datos muy relacionadas: 
+    las <strong>pilas</strong> (<em>stacks</em>) y las <strong>colas</strong> (<em>queues</em>).
+    Ambas permiten almacenar y procesar elementos siguiendo un orden particular,
+    aunque difieren en la forma en que los datos son insertados y retirados.
+  </p>
+</div>
+
+<h2>🧩 Concepto General</h2>
+<div class="section">
+  <ul>
+    <li>Una <strong>pila</strong> sigue el principio <span class="highlight">LIFO (Last In, First Out)</span>: el último elemento en entrar es el primero en salir.</li>
+    <li>Una <strong>cola</strong> sigue el principio <span class="highlight">FIFO (First In, First Out)</span>: el primer elemento en entrar es el primero en salir.</li>
+  </ul>
+  <p>
+    Estas estructuras se usan ampliamente en programación para modelar comportamientos como:
+  </p>
+  <ul>
+    <li>Control de llamadas o retroceso en funciones (pilas).</li>
+    <li>Gestión de tareas o procesos en orden de llegada (colas).</li>
+  </ul>
+</div>
+
+<h2>📦 Ejemplo Visual</h2>
+<div class="section">
+  <h3>Pila (Stack)</h3>
+  <p>
+    Imagina una pila de libros: solo puedes colocar o quitar el libro de arriba.
+    Si agregas los libros en el orden <code>4, 12, 1, 7</code>,
+    el <span class="highlight">último en entrar (7)</span> será el primero en salir.
+  </p>
+  <pre>
+Cima ↑
+7  ← Último en entrar / Primero en salir
+1
+12
+4
+  </pre>
+
+  <h3>Cola (Queue)</h3>
+  <p>
+    En cambio, una cola funciona como una fila de personas:
+    el <span class="highlight">primero en llegar</span> es el primero en ser atendido.
+    Si los elementos llegan en el orden <code>4, 12, 1, 7</code>,
+    el 4 será el primero en salir.
+  </p>
+  <pre>
+Entrada → [4] [12] [1] [7] → Salida
+FIFO: Primero en entrar, primero en salir
+  </pre>
+</div>
+
+<h2>⚙️ Operaciones Básicas</h2>
+<div class="section">
+  <table>
+    <tr><th>Operación</th><th>Pila (Stack)</th><th>Cola (Queue)</th></tr>
+    <tr><td><strong>Insertar</strong></td><td>Push: agrega elemento en la cima</td><td>Add: agrega elemento al final</td></tr>
+    <tr><td><strong>Eliminar</strong></td><td>Pop: elimina el elemento superior</td><td>Remove: elimina el primer elemento</td></tr>
+    <tr><td><strong>Consultar</strong></td><td>Peek: devuelve el elemento superior sin eliminarlo</td><td>Peek: devuelve el primer elemento sin eliminarlo</td></tr>
+    <tr><td><strong>Comprobar vacío</strong></td><td>isEmpty()</td><td>isEmpty()</td></tr>
+  </table>
+</div>
+
+<h2>🧠 Restricciones</h2>
+<div class="section">
+  <p>
+    Tanto en las pilas como en las colas, no se permite acceder directamente a un elemento intermedio.
+    Es necesario retirar los elementos previos para llegar a él.
+  </p>
+</div>
+
+<h2>🎯 Conclusión</h2>
+<div class="section">
+  <p>
+    Las <strong>pilas</strong> y <strong>colas</strong> son estructuras simples pero poderosas.
+    Su utilidad radica en su capacidad de controlar el orden de procesamiento de datos
+    de manera eficiente y predecible.
+  </p>
+  <ul>
+    <li><strong>Pilas (LIFO):</strong> ideales para funciones recursivas, retroceso o deshacer acciones.</li>
+    <li><strong>Colas (FIFO):</strong> perfectas para sistemas de espera, tareas o procesos en orden de llegada.</li>
+  </ul>
+</div>
+
+</body>
+</html>

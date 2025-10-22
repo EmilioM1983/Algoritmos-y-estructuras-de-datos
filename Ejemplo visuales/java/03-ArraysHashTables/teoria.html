@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estructuras de Datos - Introducción</title>
+<link rel="stylesheet" href="css/teoria.css">
+<script src="../../components/navegacion.js"></script>
+</head>
+<body>
+
+<h1>📘 Introducción a Arrays, Strings y Tablas Hash</h1>
+
+<div id="navegacion"></div>
+
+      <script>
+        cargarNavegacion('navegacion',"https://gist.github.com/EmilioM1983/60a2155397a6debde907ee7c29869e1f");
+    </script>
+</div>
+
+<div class="section">
+  <p>
+    Con este módulo damos comienzo a una de las partes más importantes del curso: el estudio de las
+    <span class="highlight">estructuras de datos</span>.
+    A lo largo del mismo aprenderás tanto la teoría como la práctica de estructuras fundamentales
+    como los <strong>arrays</strong>, <strong>strings</strong> y las <strong>tablas hash</strong>.
+  </p>
+</div>
+
+<h2>🧩 Arrays y Strings</h2>
+<div class="section">
+  <p>
+    Un <strong>array</strong> es una colección de elementos del mismo tipo.  
+    Un <strong>string</strong> (cadena de texto) es esencialmente un array de caracteres.
+  </p>
+  <p>
+    Por eso, los problemas de arrays y de strings suelen abordarse de la misma forma:
+    ambos implican recorrer elementos, buscar, modificar o comparar valores.
+  </p>
+  <p><strong>Ejemplo:</strong>  
+    <code>Array = [1, 2, 3, 4]</code>  
+    <code>String = "hola" → ['h', 'o', 'l', 'a']</code>
+  </p>
+</div>
+
+<h2>🔐 Tablas Hash</h2>
+<div class="section">
+  <p>
+    Una <strong>tabla hash</strong> es una estructura que almacena pares <em>clave-valor</em>.
+    Se basa en una <span class="highlight">función hash</span>, que convierte una clave en un número entero
+    para determinar dónde guardar o buscar el valor dentro de un array interno.
+  </p>
+
+  <h3>Funcionamiento:</h3>
+  <ul>
+    <li>1️⃣ Se calcula el <strong>hash</strong> de la clave.</li>
+    <li>2️⃣ Se mapea el hash a un índice del array (por ejemplo, usando el módulo).</li>
+    <li>3️⃣ Se almacena el valor en ese índice. Si hay más de un valor, se crea una lista enlazada (colisión).</li>
+  </ul>
+
+  <p><strong>Ejemplo:</strong> si la clave <code>"firstKey"</code> genera un hash 8 y el array tiene longitud 4,<br>
+  entonces <code>8 mod 4 = 0</code> → se almacena en la posición 0.</p>
+
+  <p>
+    Cuando dos claves tienen el mismo hash (colisión), ambas se guardan en una pequeña lista enlazada dentro
+    del mismo índice.
+  </p>
+
+  <h3>Complejidad:</h3>
+  <ul>
+    <li>🔹 <strong>Inserción:</strong> O(1)</li>
+    <li>🔹 <strong>Búsqueda promedio:</strong> O(1)</li>
+    <li>🔹 <strong>Búsqueda en el peor caso (colisiones frecuentes):</strong> O(N)</li>
+  </ul>
+</div>
+
+<h2>🧱 StringBuilder</h2>
+<div class="section">
+  <p>
+    Concatenar strings con el operador <code>+</code> puede ser muy ineficiente, ya que cada concatenación
+    crea un nuevo string y copia todos los caracteres de nuevo, resultando en una complejidad
+    <span class="highlight">O(n²)</span>.
+  </p>
+  <p>
+    Por eso se recomienda usar <strong>StringBuilder</strong> (o estructuras dinámicas como ArrayList),
+    que trabajan con arrays redimensionables y reducen la complejidad a
+    <span class="highlight">O(n)</span>.
+  </p>
+
+  <p><strong>Ejemplo:</strong></p>
+  <pre><code>
+StringBuilder sb = new StringBuilder();
+for (String nombre : nombres) {
+    sb.append(nombre).append(", ");
+}
+String resultado = sb.toString();
+  </code></pre>
+</div>
+
+<h2>🎯 Conclusión</h2>
+<div class="section">
+  <p>
+    En resumen:
+  </p>
+  <ul>
+    <li>Los <strong>arrays</strong> y <strong>strings</strong> comparten una estructura similar.</li>
+    <li>Las <strong>tablas hash</strong> permiten almacenar y buscar datos de forma muy eficiente.</li>
+    <li>El uso de <strong>StringBuilder</strong> mejora drásticamente el rendimiento al manipular textos largos.</li>
+  </ul>
+  <p>
+    Con estos fundamentos teóricos, estás listo para comenzar los <strong>ejercicios prácticos</strong> del módulo.
+  </p>
+</div>
+
+</body>
+</html>
