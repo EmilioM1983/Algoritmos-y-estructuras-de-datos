@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cola implementada con dos Pilas (QueueWithStacks)</title>
+  <link rel="stylesheet" href="css/queue-with-stacks-visual.css">
+  <script src="../../components/navegacion.js"></script>
+</head>
+<body>
+  <h1>Cola implementada con dos Pilas</h1>
+
+    <div id="navegacion"></div>
+
+      <script>
+        cargarNavegacion('navegacion',"https://gist.github.com/EmilioM1983/f709db2cf75f2fb8a06d112d4413e069");
+    </script>
+</div>
+
+  <p>
+    Este algoritmo implementa una <b>cola (FIFO)</b> utilizando dos pilas (<b>LIFO</b>).  
+    Los elementos se agregan en <code>firstStack</code> mediante <b>add()</b>.  
+    Cuando se necesita consultar o eliminar el primer elemento (<b>peek()</b> o <b>remove()</b>),  
+    si <code>secondStack</code> está vacía, se <b>traspasan</b> todos los elementos de 
+    <code>firstStack</code> a <code>secondStack</code>, <b>invirtiendo su orden</b>.  
+    Así, el elemento más antiguo queda arriba en <code>secondStack</code>, 
+    cumpliendo el comportamiento FIFO.
+  </p>
+
+  <div class="container">
+    <div class="stack" id="firstStack"><h3>firstStack</h3></div>
+    <div class="arrow">⇄</div>
+    <div class="stack" id="secondStack"><h3>secondStack</h3></div>
+  </div>
+
+  <div class="controls">
+    <button onclick="add()">➕ add()</button>
+    <button onclick="remove()">➖ remove()</button>
+    <button onclick="peek()">👁 peek()</button>
+    <button onclick="transfer()">🔁 dumpElements()</button>
+  </div>
+
+  <p style="margin-top:20px;">
+    <b>Complejidades:</b>  
+    add() → O(1), remove()/peek() → O(1) amortizado,  
+    dumpElements() (traspaso) → O(n) en el peor caso.
+  </p>
+
+  <script src="js/queue-with-stacks-visual.js"></script>
+</body>
+</html>

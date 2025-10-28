@@ -18,14 +18,12 @@ public class MyQueue {
   }
 
   public int remove() {
-    if (first == null) {
-      throw new MyEmptyQueueException();
-    }
 
-    int firstValue = first.value;
+
+    int firstValue = peek();
     first = first.next;
 
-    if (first == null) {
+    if (isEmpty()) {
       last = null;
     }
 
@@ -33,7 +31,7 @@ public class MyQueue {
   }
 
   public int peek() {
-    if (first == null) {
+    if (isEmpty()) {
       throw new MyEmptyQueueException();
     }
 

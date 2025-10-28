@@ -10,17 +10,14 @@ public class MyStack {
   }
 
   public int pop() {
-    if (top == null) {
-      throw new MyEmptyStackException();
-    }
 
-    int topValue = top.value;
+    int topValue = peek();
     top = top.next;
     return topValue;
   }
 
   public int peek() {
-    if (top == null) {
+    if (isEmpty()) {
       throw new MyEmptyStackException();
     }
 

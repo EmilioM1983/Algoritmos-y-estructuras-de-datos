@@ -13,28 +13,45 @@ import java.util.Deque;
  * no tiene demasiado sentido, y por ser una clase específica y no una interfaz. Si quieres saber más sobre
  * este tema puedes acceder al siguiente enlace:
  * https://stackoverflow.com/questions/12524826/why-should-i-use-deque-over-stack
+ *
+ *
  */
 public class QueueWithStacks {
   Deque<Integer> firstStack = new ArrayDeque<>();
   Deque<Integer> secondStack = new ArrayDeque<>();
 
   public void add(Integer value) {
-    throw new UnsupportedOperationException("Not implemented yet");
+
+      firstStack.push(value);
   }
 
   public Integer peek() {
-    throw new UnsupportedOperationException("Not implemented yet");
+
+      dumpElementsIntoSecondStack();
+      return secondStack.peek();
   }
 
   public Integer remove() {
-    throw new UnsupportedOperationException("Not implemented yet");
+
+      dumpElementsIntoSecondStack();
+      return secondStack.pop();
+  }
+
+  private  void dumpElementsIntoSecondStack(){
+      if (secondStack.isEmpty()){
+          while (!firstStack.isEmpty()){
+              secondStack.push((firstStack.pop()));
+          }
+      }
   }
 
   public boolean isEmpty() {
-    throw new UnsupportedOperationException("Not implemented yet");
+
+      return size() == 0;
   }
 
   public int size() {
-    throw new UnsupportedOperationException("Not implemented yet");
+
+      return firstStack.size() + secondStack.size();
   }
 }
